@@ -14,7 +14,8 @@
 
 - name: Pre Audit Setup | Download audit binary
   ansible.builtin.get_url:
-      url: "{{ audit_bin_url }}{{ audit_pkg_arch_name }}"
+     ## url: "{{ audit_bin_url }}{{ audit_pkg_arch_name }}"
+      url: "https://github.com/goss-org/goss/releases/tag/v0.4.4"
       dest: "{{ audit_bin }}"
       owner: root
       group: root
