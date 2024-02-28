@@ -17,7 +17,7 @@ system_is_container: false
 container_vars_file: is_container.yml
 # rhel9cis is left off the front of this var for consistency in testing pipeline
 # system_is_ec2 toggle will disable tasks that fail on Amazon EC2 instances. Set true to skip and false to run tasks
-system_is_ec2: false
+system_is_ec2: true
 
 # Run the OS validation check
 # Supported OSs will not need for this to be changed - see README e.g. CentOS
@@ -62,7 +62,7 @@ benchmark: RHEL9-CIS
 
 # Whether to skip the system reboot before audit
 # System will reboot if false, can give better audit results
-skip_reboot: true
+skip_reboot: false
 
 # default value will change to true but wont reboot if not enabled but will error
 change_requires_reboot: false
