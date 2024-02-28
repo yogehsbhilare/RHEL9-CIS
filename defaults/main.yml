@@ -86,7 +86,7 @@ setup_audit: true
 run_audit: true
 
 # Only run Audit do not remediate
-audit_only: true
+audit_only: false
 # This will enable files to be copied back to control node(part of audit_only)
 fetch_audit_files: true
 # Path to copy the files to will create dir structure(part of audit_only)
