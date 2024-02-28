@@ -3,7 +3,7 @@
 #### Audit Configuration Settings ####
 
 # if get_audit_binary_method == download change accordingly
-audit_bin_url: "https://github.com/goss-org/goss/releases/download/{{ audit_bin_version.release }}/goss-linux-"
+##audit_bin_url: "https://github.com/goss-org/goss/releases/download/{{ audit_bin_version.release }}/goss-linux-"
 
 ### Goss Audit Benchmark file ###
 ## managed by the control audit_content
@@ -30,6 +30,8 @@ audit_bin_version:
 audit_bin_path: /usr/local/bin/
 audit_bin: "{{ audit_bin_path }}goss"
 audit_format: json
+
+audit_bin_url: "https://github.com/goss-org/goss/releases/download/{{ audit_bin_version.release }}/goss-linux-"
 
 audit_vars_path: "{{ audit_conf_dir }}/vars/{{ ansible_facts.hostname }}.yml"
 audit_results: |
