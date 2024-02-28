@@ -77,13 +77,13 @@ change_requires_reboot: false
 # Audits are carried out using Goss. This variable
 # determines whether execution of the role prepares for auditing
 # by installing the required binary.
-setup_audit: false
+setup_audit: true
 
 ## Enable audits to run - this runs the audit and get the latest content
 # This variable governs whether the audit using the
 # separately maintained audit role using Goss
 # is carried out.
-run_audit: false
+run_audit: true
 
 # Only run Audit do not remediate
 audit_only: false
