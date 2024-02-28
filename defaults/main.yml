@@ -103,7 +103,7 @@ get_audit_binary_method: download
 ## if get_audit_binary_method is 'copy', the following var needs to be updated for your environment
 ## it is expected that it will be copied from somewhere accessible to the control node
 ## e.g copy from ansible control node to remote host
-audit_bin_copy_location: /opt ##/some/accessible/path
+audit_bin_copy_location: ~ ##/some/accessible/path
 
 ## How to retrieve the audit role
 # The role for auditing is maintained separately.
