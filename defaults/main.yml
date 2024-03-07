@@ -62,7 +62,7 @@ benchmark: RHEL9-CIS
 
 # Whether to skip the system reboot before audit
 # System will reboot if false, can give better audit results
-skip_reboot: true
+skip_reboot: false
 
 # default value will change to true but wont reboot if not enabled but will error
 change_requires_reboot: false
@@ -88,9 +88,9 @@ run_audit: true
 # Only run Audit do not remediate
 audit_only: false
 # This will enable files to be copied back to control node(part of audit_only)
-fetch_audit_files: false
+fetch_audit_files: true
 # Path to copy the files to will create dir structure(part of audit_only)
-audit_capture_files_dir: ~ ## /some/location to copy to on control node
+audit_capture_files_dir: /opt ## /some/location to copy to on control node
 
 ## How to retrieve audit binary(Goss)
 # Options are 'copy' or 'download' - detailed settings at the bottom of this file
@@ -244,10 +244,7 @@ rhel9cis_rule_2_4: true
 
 # Section 3 rules are used for securely configuring the network configuration(kernel params, ACL, Firewall settings)
 rhel9cis_rule_3_1_1: true
-
-# Disable for audit Report
-rhel9cis_rule_3_1_2: false
-
+rhel9cis_rule_3_1_2: true
 rhel9cis_rule_3_1_3: true
 rhel9cis_rule_3_2_1: true
 rhel9cis_rule_3_2_2: true
@@ -315,7 +312,6 @@ rhel9cis_rule_4_2_1_2: true
 rhel9cis_rule_4_2_1_3: true
 rhel9cis_rule_4_2_1_4: true
 rhel9cis_rule_4_2_1_5: true
-
 rhel9cis_rule_4_2_1_6: true
 rhel9cis_rule_4_2_1_7: true
 rhel9cis_rule_4_2_2_1_1: true
@@ -385,7 +381,7 @@ rhel9cis_rule_5_6_2: true
 rhel9cis_rule_5_6_3: true
 rhel9cis_rule_5_6_4: true
 rhel9cis_rule_5_6_5: true
-rhel9cis_rule_5_6_6: false ## disable for the root password setup
+rhel9cis_rule_5_6_6: true
 
 # Section 6 rules controls System Maintenance (System File Permissions and User and Group Settings)
 rhel9cis_rule_6_1_1: true
@@ -1195,9 +1191,7 @@ rhel9cis_futurepwchgdate_autofix: true
 ## Control 5.3.7 - Ensure access to the 'su' command is restricted
 # This variable determines the name of the group of users that are allowed to use the su command.
 # CIS requires that such a group be CREATED(named according to site policy) and be kept EMPTY.
-
-####Disabled for Audit clearance
-#rhel9cis_sugroup: nosugroup
+rhel9cis_sugroup: nosugroup
 
 ## Section6 vars
 
