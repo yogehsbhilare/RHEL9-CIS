@@ -244,7 +244,10 @@ rhel9cis_rule_2_4: true
 
 # Section 3 rules are used for securely configuring the network configuration(kernel params, ACL, Firewall settings)
 rhel9cis_rule_3_1_1: true
-rhel9cis_rule_3_1_2: true
+
+# Disable for audit Report
+rhel9cis_rule_3_1_2: false
+
 rhel9cis_rule_3_1_3: true
 rhel9cis_rule_3_2_1: true
 rhel9cis_rule_3_2_2: true
@@ -312,6 +315,7 @@ rhel9cis_rule_4_2_1_2: true
 rhel9cis_rule_4_2_1_3: true
 rhel9cis_rule_4_2_1_4: true
 rhel9cis_rule_4_2_1_5: true
+
 rhel9cis_rule_4_2_1_6: true
 rhel9cis_rule_4_2_1_7: true
 rhel9cis_rule_4_2_2_1_1: true
@@ -1191,7 +1195,9 @@ rhel9cis_futurepwchgdate_autofix: true
 ## Control 5.3.7 - Ensure access to the 'su' command is restricted
 # This variable determines the name of the group of users that are allowed to use the su command.
 # CIS requires that such a group be CREATED(named according to site policy) and be kept EMPTY.
-rhel9cis_sugroup: nosugroup
+
+####Disabled for Audit clearance
+#rhel9cis_sugroup: nosugroup
 
 ## Section6 vars
 
